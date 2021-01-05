@@ -6,11 +6,13 @@ import { FormsModule } from '@angular/forms';
 
 import { PriceComponent } from './price/price.component';
 import { PageTitleComponent } from '../core/page-title/page-title.component';
+import { ShopSortingComponent } from '../core/shop-sorting/shop-sorting.component';
 
 @NgModule({
     declarations: [
         PriceComponent,
-        PageTitleComponent
+        PageTitleComponent,
+        ShopSortingComponent
     ],
     imports: [
         CommonModule,
@@ -20,6 +22,7 @@ import { PageTitleComponent } from '../core/page-title/page-title.component';
     exports: [
         PriceComponent,
         PageTitleComponent,
+        ShopSortingComponent,
         CommonModule,
         AppRoutingModule,
         FormsModule

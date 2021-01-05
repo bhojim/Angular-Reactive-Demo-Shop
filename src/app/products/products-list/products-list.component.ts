@@ -20,7 +20,7 @@ import { User } from '../../models/user.model';
 })
 export class ProductsListComponent implements OnInit, OnDestroy {
   unsubscribe$ = new Subject();
-  products: Product[];
+  public products: Product[];
   productsPaged: Product[];
   pager: any = {};
   user: User;
@@ -89,6 +89,11 @@ export class ProductsListComponent implements OnInit, OnDestroy {
     this.setPage(1);
   }
 
+  sortingChangedHandler(products: Product[]) {
+    this.products = products;
+    this.setPage(1);
+  }
+  
   ngOnDestroy() {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();

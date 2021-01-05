@@ -29,6 +29,7 @@ import { UiService } from '../products/shared/ui.service';
 import { ProductsCacheService } from '../products/shared/products-cache.service';
 
 import { throwIfAlreadyLoaded } from './module-import-guard';
+// import { ShopSortingComponent } from './content/shop-sorting/shop-sorting.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
         ProductWidgetComponent,
         PromoComponent,
         SearchComponent
+        // ShopSortingComponent
     ],
     imports: [
         CommonModule,
