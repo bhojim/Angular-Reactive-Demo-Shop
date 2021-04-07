@@ -6,7 +6,6 @@ import { NgxSiemaModule } from 'ngx-siema';
 import { ContentComponent } from './content/content.component';
 import { HeaderComponent } from './header/header.component';
 import { NavigationOffCanvasComponent } from './navigation-off-canvas/navigation-off-canvas.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './content/footer/footer.component';
 import { NavigationMainComponent } from './header/navigation-main/navigation-main.component';
 import { ToolbarCartComponent } from './header/toolbar/cart/cart.component';
@@ -37,7 +36,6 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
         ContentComponent,
         HeaderComponent,
         NavigationOffCanvasComponent,
-        TopBarComponent,
         FooterComponent,
         NavigationMainComponent,
         ToolbarCartComponent,
@@ -57,7 +55,6 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
         CommonModule,
         SharedModule,
         NavigationOffCanvasComponent,
-        TopBarComponent,
         HeaderComponent,
         ContentComponent
     ],

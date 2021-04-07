@@ -42,7 +42,8 @@ export class ProductsListComponent implements OnInit, OnDestroy {
       .subscribe((user) => {
         this.user = user;
       });
-    this.uiService.currentPagingPage$
+    // this.uiService.currentPagingPage$
+      this.uiService.getCurrentPage()
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((page) => {
         this.currentPagingPage = page;
@@ -76,7 +77,8 @@ export class ProductsListComponent implements OnInit, OnDestroy {
       this.pager.startIndex,
       this.pager.endIndex + 1
     );
-    this.uiService.currentPagingPage$.next(page);
+    // this.uiService.currentPagingPage$.next(page);
+    this.uiService.setPage(page);
   }
 
   onSort(sortBy: string) {

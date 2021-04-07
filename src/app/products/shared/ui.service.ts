@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class UiService {
@@ -11,5 +11,13 @@ export class UiService {
     this.sorting$ = new BehaviorSubject('date:reverse');
     this.displayMode$ = new BehaviorSubject('grid');
     this.currentPagingPage$ = new BehaviorSubject(1);
+  }
+
+  getCurrentPage(): Observable<number> {
+    return this.currentPagingPage$.asObservable();
+  }
+
+  setPage(page: number) {
+    this.currentPagingPage$.next(page);
   }
 }
